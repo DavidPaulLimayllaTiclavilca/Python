@@ -1,0 +1,32 @@
+def run():
+    
+    while allow == True:
+        first_option = input('''
+_____________________________________________________________________________
+Este es un programa que puede pasar cualquier numero a binario o hexadecimal.
+
+PULSE [b] PARA PASAR A BINARIO
+PULSE [h] PARA PASAR A HEXADECIMAL
+PULSE [c] PARA CERRAR EL PROGRAMA
+
+Tecla: ''')
+    
+        if first_option == 'b':
+            print('BINARIO')
+            bin_number = int(input('inserte el número: '))
+            print(bin(bin_number))
+        
+        if first_option == 'h':
+            print('HEXADECIMAL')
+            hex_number = int(input('inserte el número: '))
+            print(hex(hex_number))
+            
+        if first_option == 'c':
+            print('Gracias por usar el programa.')
+            allow == False
+            break
+            
+if __name__ == '__main__':
+    allow = True
+    run()
+    
