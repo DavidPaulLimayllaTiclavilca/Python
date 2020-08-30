@@ -1,0 +1,48 @@
+def run():
+    
+    while allow == True:
+        number = input('''
+ESTE PROGRAMA MULTIPLICA, DIVIDE, O ELEVA CUALQUIER NÚMERO A OTRO
+
+PRESS [m] PARA MULTIPLICAR 
+PRESS [d] PARA DIVIDIR
+PRESS [e] PARA ELEVAR
+PRESS [c] PARA CERRAR
+''')
+    
+        if number == 'm':
+            print('MULTIPLICACIÓN')
+            mul_1 = float(input(' '))
+            mul_2 = float(input(' '))
+            soluc = mul_1 * mul_2
+            print('El resultado es: {}'.format(soluc))
+
+        if number == 'd':
+            print('DIVISIÓN')
+            div_1 = float(input('dividendo: '))
+            div_2 = float(input('divisor: '))
+            rest = div_1 % div_2
+            soluc = div_1 / div_2
+            print('''
+El cociente es: {})
+El resto es: {}'''.format(soluc, rest))
+            
+        if number == 'e':
+            print('NÚMERO ELEVADO A OTRO')
+            ele_1 = float(input('Base: '))
+            ele_2 = float(input('Exponente: '))
+            soluc = ele_1 ** ele_2
+            print('El resultado es: {}'.format(soluc))
+            
+            
+        if number == 'c':
+            print('Gracias por usar el programa.')
+            return allow == False
+            
+        else:
+            print('Lee otra vez el texto')
+            run()
+            
+if __name__ == '__main__':
+    allow = True
+    run()
